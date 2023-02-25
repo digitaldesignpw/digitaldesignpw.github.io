@@ -1,0 +1,103 @@
+/*-------------------------------------------------------------------*/
+/*------------------------------General------------------------------*/
+/*-------------------------------------------------------------------*/
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+@keyframes rock0 {
+  0%   {transform: translateY(-10vh);}
+  100% {transform: translateY(0vh);}
+}
+@keyframes rock1 {
+  0%   {transform: translateY(-20vh);}
+  100% {transform: translateY(0vh);}
+}
+@keyframes rock2 {
+  0%   {transform: translateY(-30vh);}
+  100% {transform: translateY(0vh);}
+}
+@keyframes rock3 {
+  0%   {transform: translateY(-40vh);}
+  100% {transform: translateY(0vh);}
+}
+
+body{
+
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.header-bg {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+#Capa_0, #Capa_1, #Capa_2, #Capa_3, #Logo_SVG {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#Capa_0{
+  justify-self: left;
+  animation: rock0 8s infinite alternate;
+  height: auto;
+  width: 80%;
+}
+#Capa_1{
+    animation: rock1 8s infinite alternate;
+    width: 50vw;
+    justify-self: end;
+    align-self: start;
+}
+#Capa_2{
+    animation: rock2 8s infinite alternate;
+    width: 50vw;
+    justify-self: end;
+    align-self: start;
+}
+#Capa_3 {
+    animation: rock3 8s infinite alternate;
+    width: 50vw;
+    justify-self: end;
+    align-self: start;
+}
+
+#Logo_SVG {
+  justify-self: center;
+  align-self: center;
+  z-index: 10;
+  width: 60vw;
+  margin-right: 10vw;
+  margin-top: 4vh;
+}
+
+/*------------------------------Responsive------------------------------*/
+@media screen and (max-width: 768px){
+
+  #Capa_0 {
+    height: 110vh;
+    width: auto;
+  }
+
+  #Logo_SVG {
+    width: 80vw;
+    margin-right: 10vw;
+    margin-top: 0vh;
+  }
+
+}
+@media screen and (max-width: 320px){
+
+}
